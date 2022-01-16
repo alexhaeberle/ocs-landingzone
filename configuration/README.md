@@ -1,4 +1,4 @@
-# Cloud Adoption Framework landing zones for Terraform - Starter template
+# Cloud Adoption Framework OCS landing zones for Terraform
 
 ## Creating your environment
 
@@ -19,7 +19,7 @@ In order to create those customized configuration environment, you can leverage:
 
 ## General getting started
 
-### 0. Use this template to create your own configuration repository
+### 0. Use this repo to create your own configuration repository
 
 You can either click "Use this template" at the root of this GitHub repository, or just import this repository into your favorite git technology. Once setup, clone the content locally on your laptop and open it with Visual Studio Code. You can see a full list of prerequisites [here](https://github.com/Azure/caf-terraform-landingzones/blob/master/documentation/getting_started/getting_started.md). You can also use GitHub Codespaces as your development environment.
 
@@ -29,10 +29,10 @@ You can either click "Use this template" at the root of this GitHub repository, 
 First step is to get the landing zones logic in the same work space, so let's clone the environment locally:
 
 ```bash
-git clone --branch 2107.1 https://github.com/Azure/caf-terraform-landingzones.git /tf/caf/landingzones
+git clone --branch master https://github.com/Viewpointe/ocs-landingzone.git <local repo folder>
 # Or refresh an existing clone
-cd /tf/caf/landingzones
-git checkout 2107.1
+cd <local repo folder>
+git checkout master
 git pull
 ```
 
@@ -56,7 +56,7 @@ az account set -s <subscription_name_OR_GUID>
 
 Once you have completed the preliminary steps above, you can start reviewing the configurations, we recommend you start your first deployment with the demo section.
 
-| example environment    | description                                                                      |
+| OCS environment    | description                                                                      |
 |------------------------|----------------------------------------------------------------------------------|
 | [demo](./demo)         | demo environment without RBAC, diagnostics and pipelines                         |
 | [sandpit](./sandpit)   | initial enterprise environment, with diagnostics and simple pipelines (optional) |

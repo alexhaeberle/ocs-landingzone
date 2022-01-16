@@ -1,4 +1,4 @@
-# Cloud Adoption Framework landing zones for Terraform - Starter template
+# Cloud Adoption Framework OCS landing zones for Terraform
 
 ## DEMO ENVIRONMENT
 
