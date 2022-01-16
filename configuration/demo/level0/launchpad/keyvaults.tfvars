@@ -18,6 +18,20 @@ keyvaults = {
       }
     }
 
+    # you can setup up to 5 profiles
+    diagnostic_profiles = {
+      operations = {
+        definition_key   = "default_all"
+        destination_type = "log_analytics"
+        destination_key  = "central_logs"
+      }
+      siem = {
+        definition_key   = "siem_all"
+        destination_type = "storage"
+        destination_key  = "all_regions"
+      }
+    }
+
   }
 
   level1 = {
@@ -37,6 +51,21 @@ keyvaults = {
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
       }
     }
+
+    # you can setup up to 5 profiles
+    diagnostic_profiles = {
+      operations = {
+        definition_key   = "default_all"
+        destination_type = "log_analytics"
+        destination_key  = "central_logs"
+      }
+      siem = {
+        definition_key   = "siem_all"
+        destination_type = "storage"
+        destination_key  = "all_regions"
+      }
+    }
+
   }
 
   level2 = {
@@ -54,6 +83,20 @@ keyvaults = {
         # if the key is set to "logged_in_user" add the user running terraform in the keyvault policy
         # More examples in /examples/keyvault
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
+      }
+    }
+
+    # you can setup up to 5 profiles
+    diagnostic_profiles = {
+      operations = {
+        definition_key   = "default_all"
+        destination_type = "log_analytics"
+        destination_key  = "central_logs"
+      }
+      siem = {
+        definition_key   = "siem_all"
+        destination_type = "storage"
+        destination_key  = "all_regions"
       }
     }
 
@@ -76,6 +119,21 @@ keyvaults = {
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
       }
     }
+
+    # you can setup up to 5 profiles
+    diagnostic_profiles = {
+      operations = {
+        definition_key   = "default_all"
+        destination_type = "log_analytics"
+        destination_key  = "central_logs"
+      }
+      siem = {
+        definition_key   = "siem_all"
+        destination_type = "storage"
+        destination_key  = "all_regions"
+      }
+    }
+
   }
 
   level4 = {
@@ -95,5 +153,21 @@ keyvaults = {
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
       }
     }
+
+    # you can setup up to 5 profiles
+    diagnostic_profiles = {
+      operations = {
+        definition_key   = "default_all"
+        destination_type = "log_analytics"
+        destination_key  = "central_logs"
+      }
+      siem = {
+        definition_key   = "siem_all"
+        destination_type = "storage"
+        destination_key  = "all_regions"
+      }
+    }
+
   }
+
 }

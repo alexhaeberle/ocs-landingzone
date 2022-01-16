@@ -4,9 +4,27 @@ landingzone = {
   key          = "launchpad"
 }
 
+enable = {
+  bastion_hosts    = false
+  virtual_machines = false
+}
 
 # Default region. When not set to a resource it will use that value
 default_region = "region1"
+
+regions = {
+  region1 = "eastus"
+  region2 = "westus"
+}
+
+# core tags to be applied accross this landing zone
+tags = {
+  owner          = "OCS"
+  deploymentType = "Terraform"
+  costCenter     = "0"
+  BusinessUnit   = "SHARED"
+  DR             = "NON-DR-ENABLED"
+}
 
 # naming convention settings
 # for more settings on naming convention, please refer to the provider documentation: https://github.com/aztfmod/terraform-provider-azurecaf
@@ -17,52 +35,59 @@ default_region = "region1"
 # adds random chars at the end of the names produced by the provider
 # random_length = 3
 
-# Inherit_tags defines if a resource will inherit it's resource group tags
+# all resources deployed will inherit tags from the parent resource group
 inherit_tags = true
 
-regions = {
-  region1 = "southeastasia"
-  region2 = "eastasia"
-}
-
 launchpad_key_names = {
-  azuread_app            = "caf_launchpad_level0"
-  keyvault_client_secret = "aadapp-caf-launchpad-level0"
+  azuread_app            = "ocs_launchpad_level0"
+  keyvault_client_secret = "aadapp-ocs-launchpad-level0"
   tfstates = [
     "level0",
+    "level1",
+    "level2",
+    "level3",
+    "level4"
   ]
 }
 
 resource_groups = {
   level0 = {
-    name = "launchpad-level0"
+    name = "ocs-launchpad-level0"
     tags = {
       level = "level0"
     }
   }
   level1 = {
-    name = "launchpad-level1"
+    name = "ocs-launchpad-level1"
     tags = {
       level = "level1"
     }
   }
   level2 = {
-    name = "launchpad-level2"
+    name = "ocs-launchpad-level2"
     tags = {
       level = "level2"
     }
   }
   level3 = {
-    name = "launchpad-level3"
+    name = "ocs-launchpad-level3"
     tags = {
       level = "level3"
     }
   }
   level4 = {
-    name = "launchpad-level4"
+    name = "ocs-launchpad-level4"
     tags = {
       level = "level4"
     }
   }
+  security = {
+    name = "ocs-launchpad-security"
+  }
+  ops = {
+    name = "ocs-operations"
+  }
+  siem = {
+    name = "siem-logs"
+  }
 }
-
